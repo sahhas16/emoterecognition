@@ -1,0 +1,68 @@
+ 
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+<body>
+  <div class="container">
+    <center>
+      <h3 class ="btn btn-warning heading">
+        Emotion to Emoji 
+        <br>
+        <span>😊</span>
+        <span>😄</span>
+        <span>😔</span>
+        <span>😢</span>
+        <span>😡</span>
+        <span>😤</span>
+      </h3>
+      <br>
+      <br>
+      
+    <p>Take your selfie to generate emoji!
+      <br>
+      <br>
+      <b style="color:#f25507">Are you happy 😊</b>
+      <br>
+      <br>
+      <b style="color:#0713f2">Are you sad 😟</b>
+      <br>
+      <br>
+      <b style="color:#f20b07">Are you angry 😡<br></b>
+     
+    </p>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <label style="font-weight: bold;font-size:18.5px;">Webcam view-</label>
+      <div class="live" id="liveoutput"></div>
+      <br>
+      <button onclick="capture()" class="btn btn-success">Capture</button>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <label class="prediction">Prediction 1 -</label>
+      <div id="EmojiId#1"></div>
+      <div id="Emoji#1"></div>
+      <br>
+      <label class="prediction">Prediction 2 -</label>
+      <div id="EmojiId#2"></div>
+      <div id="Emoji#2"></div>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <label style="font-weight: bold;font-size:18.5px;">Snapshot view-</label>
+      <div class="recorded" id="recordedoutput"></div>
+      <br>
+      <button onclick="capture()" class="btn btn-success">Recognize</button>
+    </div>
+    </center>
+  </div>
+</body>
+<script src="main.js"></script>
+ </html>
